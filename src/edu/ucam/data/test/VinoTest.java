@@ -93,11 +93,11 @@ public class VinoTest {
         assertEquals(999, vino1.getId());               // fallo
     }
 //
-//    @Test
-//    public void testNullFalla() {
-//        // nombre NO es nulo, así que esto fallará
-//        assertNull(vino1.getNombre());                  // fallo
-//    }
+    @Test
+    public void testNullFalla() {
+        // nombre NO es nulo, así que esto fallará
+        assertNull(vino1.getNombre());                  // fallo
+    }
 //
 //    @Test
 //    public void testSameFalla() {
