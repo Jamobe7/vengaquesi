@@ -21,16 +21,15 @@ jobs:
           cache: 'maven'
           
       - name: Compilar y Ejecutar Pruebas con Maven
-        # ATENCIÓN: Si sigue apareciendo "No tests to run", descomenta la línea de abajo 
-        # y usa el nombre exacto de la carpeta que contiene tu pom.xml y src
-        # Ejemplo, basado en tu log:
-        #working-directory: ./Practica4/
+        working-directory: . # FORZAMOS LA RUTA A LA RAÍZ
         run: mvn --batch-mode clean install
         
       # === PASOS DESACTIVADOS TEMPORALMENTE PARA LA DEMOSTRACIÓN DE FALLO DE CÓDIGO ===
         
       # - name: Análisis de Calidad con SonarQube
+      #   working-directory: . # FORZAMOS LA RUTA A LA RAÍZ
       #   run: mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.10.0.2599:sonar -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         
       # - name: Publicar Artefacto en Nexus
+      #   working-directory: . # FORZAMOS LA RUTA A LA RAÍZ
       #   run: mvn deploy -s settings.xml
