@@ -87,11 +87,11 @@ public class VinoTest {
 
     // ====== TESTS DISEÑADOS PARA FALLAR (FALLO) ======
 
-//    @Test
-//    public void testEqualsFalla() {
-//        // Espera 999 pero realmente el id es 1
-//        assertEquals(999, vino1.getId());               // fallo
-//    }
+    @Test
+    public void testEqualsFalla() {
+        // Espera 999 pero realmente el id es 1
+        assertEquals(999, vino1.getId());               // fallo
+    }
 //
 //    @Test
 //    public void testNullFalla() {
